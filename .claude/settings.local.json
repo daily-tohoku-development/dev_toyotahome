@@ -19,7 +19,11 @@
       "mcp__puppeteer__puppeteer_evaluate",
       "Bash(ls:*)",
       "mcp__puppeteer-mcp__puppeteer_screenshot",
-      "Bash(gh repo edit:*)"
+      "Bash(gh repo edit:*)",
+      "Bash(git rm:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\ndocsディレクトリをgitignoreに追加\n\n- デザインファイル（.ai, .psd等）をリポジトリから除外\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push)"
     ]
   }
 }

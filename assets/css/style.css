@@ -738,9 +738,7 @@ ul, ol {
   .hero__mv-container {
     position: relative;
     width: 100%;
-    height: 58.33vw; /* 1120px / 1920px = 58.33% */
-    max-height: 1120px;
-    min-height: 500px;
+    height: 1100px;
     overflow-x: hidden;
     overflow-y: hidden;
   }
@@ -786,8 +784,7 @@ ul, ol {
   }
 
   .hero__mv-left-img {
-    height: 58.33vw; /* 1120px / 1920px = 58.33% */
-    max-height: 1120px;
+    height: 1100px;
     width: auto;
     display: block;
   }
@@ -801,7 +798,7 @@ ul, ol {
   }
 
   .hero__catch-img {
-    width: 680px;
+    width: 35vw;
     max-width: 600px;
     height: auto;
     display: block;

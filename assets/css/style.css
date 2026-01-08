@@ -888,7 +888,7 @@ ul, ol {
 
   .system__title-img--pc {
     display: block;
-    max-width: 1280px;
+    max-width: 1300px;
     margin: 0 auto;
   }
 
@@ -913,8 +913,9 @@ ul, ol {
 
   .system__diagram-img--pc {
     display: block;
-    max-width: 940px;
-    margin-left: 280px;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: 0;
   }
 
   .system__note {
@@ -976,7 +977,7 @@ ul, ol {
   .modelhouse__region-row {
     display: flex;
     justify-content: flex-start;
-    gap: 95px;
+    gap: 50px;
     margin-bottom: 20px;
   }
 
@@ -985,8 +986,7 @@ ul, ol {
   }
 
   .modelhouse__region-row .region-item {
-    flex: 0 0 auto;
-    min-width: 70px;
+    flex: 0 0 120px;
     font-size: 2.55rem;
   }
 

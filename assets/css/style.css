@@ -41,6 +41,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -49,6 +50,7 @@ body {
   line-height: 1.8;
   color: var(--color-text);
   background-color: #fdeae7;
+  overflow-x: hidden;
 }
 
 img {
@@ -223,7 +225,7 @@ ul, ol {
    ============================================ */
 .hero {
   padding-top: 35px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .hero__image {
@@ -363,6 +365,14 @@ ul, ol {
 }
 
 .hero__image--pc {
+  display: none;
+}
+
+.hero__mv-left-cover {
+  display: none;
+}
+
+.hero__wave-top {
   display: none;
 }
 
@@ -766,6 +776,7 @@ ul, ol {
   }
 
   .hero__wave-top {
+    display: block;
     position: absolute;
     top: -865px;
     left: 70%;

@@ -1,7 +1,6 @@
 // CTA button scroll position
 document.addEventListener('DOMContentLoaded', function() {
   const ctaPC = document.querySelector('.hero__cta-pc');
-  const ctaSP = document.querySelector('.hero__cta');
   const footerCta = document.querySelector('.footer__cta');
 
   // PC版: スクロール時に位置調整
@@ -15,33 +14,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // SP版: スクロールで固定表示、Footer付近で非表示
-  if (ctaSP && footerCta) {
-    // CTAの元の位置を記録
-    const ctaOriginalTop = ctaSP.offsetTop + ctaSP.offsetHeight;
+  // SP版: footer__cta を Intersection Observer で監視
+  // 初期表示は画面下部に固定、DOM位置に到達したら通常フローに戻す
+  const footerCtaAnchor = document.querySelector('.footer__cta-anchor');
 
-    const checkScrollPosition = function() {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const footerRect = footerCta.getBoundingClientRect();
+  if (footerCta && footerCtaAnchor) {
+    // SP版かどうかを判定（768px未満）
+    const isSP = () => window.innerWidth < 768;
 
-      // CTAが画面外にスクロールされたら固定表示
-      if (scrollY > ctaOriginalTop - windowHeight + 100) {
-        ctaSP.classList.add('is-fixed');
-      } else {
-        ctaSP.classList.remove('is-fixed');
+    // Intersection Observer でアンカー位置を監視
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!isSP()) return; // PC版では何もしない
+
+          if (entry.isIntersecting) {
+            // アンカー位置がビューポートに入った → 通常フローに戻す
+            footerCta.classList.add('is-static');
+          } else {
+            // アンカー位置がビューポート外 → 画面下部に固定
+            footerCta.classList.remove('is-static');
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0
       }
+    );
 
-      // Footer CTAが画面内に入ったら非表示
-      if (footerRect.top < windowHeight) {
-        ctaSP.classList.add('is-hidden');
-      } else {
-        ctaSP.classList.remove('is-hidden');
+    observer.observe(footerCtaAnchor);
+
+    // リサイズ時にPC/SP切り替え対応
+    window.addEventListener('resize', () => {
+      if (!isSP()) {
+        footerCta.classList.remove('is-static');
       }
-    };
-
-    window.addEventListener('scroll', checkScrollPosition);
-    window.addEventListener('resize', checkScrollPosition);
-    checkScrollPosition(); // 初期チェック
+    });
   }
 });

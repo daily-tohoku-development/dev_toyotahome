@@ -814,6 +814,10 @@ ul, ol {
     display: block;
   }
 
+  .hero__mv-left-cover {
+    display: none;
+  }
+
   .hero__mv-right {
     position: absolute;
     right: 5%;
@@ -1192,5 +1196,14 @@ ul, ol {
     width: 3800px;
     top: -800px;
     left: 48%;
+  }
+
+  .hero__mv-left-cover {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: auto;
   }
 }

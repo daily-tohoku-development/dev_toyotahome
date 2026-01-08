@@ -375,7 +375,7 @@ ul, ol {
    ============================================ */
 .about {
   padding: 0;
-  margin-top: -30px;
+  margin-top: 8px;
 }
 
 .about__inner {
@@ -731,6 +731,80 @@ ul, ol {
     padding: 0;
     margin-bottom: 0;
     position: relative;
+    background-color: #fbd8d1;
+    overflow: hidden;
+  }
+
+  .hero__mv-container {
+    position: relative;
+    width: 100%;
+    height: 58.33vw; /* 1120px / 1920px = 58.33% */
+    max-height: 1120px;
+    min-height: 500px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .hero__wave-top {
+    position: absolute;
+    top: -865px;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 3300px;
+    height: auto;
+    max-width: none;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero__wave-bottom {
+    position: absolute;
+    bottom: -400px;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 3300px;
+    height: auto;
+    max-width: none;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .hero__mv-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero__mv-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .hero__mv-left-img {
+    height: 58.33vw; /* 1120px / 1920px = 58.33% */
+    max-height: 1120px;
+    width: auto;
+    display: block;
+  }
+
+  .hero__mv-right {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .hero__catch-img {
+    width: 680px;
+    max-width: 600px;
+    height: auto;
+    display: block;
   }
 
   .hero__img--pc {
@@ -775,11 +849,33 @@ ul, ol {
   /* About */
   .about {
     padding: 0 40px 0 40px;
+    margin-top: -400px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .about__overlap-box {
+    height: 400px;
+    background: transparent;
+    pointer-events: none;
+  }
+
+  .about__wave-img {
+    display: block;
+    position: absolute;
+    top: -628px;
+    left: 52%;
+    transform: translateX(-50%);
+    width: 3300px;
+    height: auto;
+    max-width: none;
+    pointer-events: none;
+    z-index: 10;
   }
 
   .about__inner {
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 8px auto 0;
   }
 
   .about__description-img--sp {

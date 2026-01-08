@@ -805,7 +805,7 @@ ul, ol {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 3;
   }
 
   .hero__mv-left-img {
@@ -1184,26 +1184,37 @@ ul, ol {
     background-color: #fff;
   }
 
+  .hero__image--pc {
+    overflow: visible;
+  }
+
+  .hero__mv-container {
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+  }
+
   .hero__wave-top {
     width: 3800px;
     top: -1000px;
     left: 49%;
-    z-index: 1;
-  }
-
-
-  .about__wave-img {
-    width: 3800px;
-    top: -800px;
-    left: 48%;
+    z-index: 2;
   }
 
   .hero__mv-left-cover {
     display: block;
     position: absolute;
-    top: 0;
-    right: 100%;
-    height: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 1100px;
     width: auto;
+    z-index: 1;
+  }
+
+  .about__wave-img {
+    width: 4200px;
+    top: -900px;
+    left: 48%;
   }
 }

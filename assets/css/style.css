@@ -320,7 +320,7 @@ ul, ol {
 }
 
 .hero__cta {
-  display: flex;
+  display: none;
   gap: 0;
   justify-content: center;
   padding: 0;
@@ -642,8 +642,11 @@ ul, ol {
 }
 
 .footer__cta {
+  position: sticky;
+  bottom: 0;
   display: flex;
   gap: 0;
+  z-index: 100;
 }
 
 .footer__cta-link {
@@ -1094,6 +1097,7 @@ ul, ol {
 
   /* Footer */
   .footer__cta {
+    position: static;
     justify-content: center;
     max-width: 955px;
     margin: 0 auto 64px;
@@ -1143,10 +1147,33 @@ ul, ol {
 
 @media (min-width: 1920px) {
 
+  .header {
+    z-index: 1000;
+  }
+
+  .hero__mv-left {
+    z-index: 100;
+  }
+
+  .hero__mv-content::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 100;
+    background-color: #fff;
+    width: 900px;
+    height: 100%;
+    z-index: 1;
+  }
+
   .hero__wave-top {
     width: 3800px;
     top: -1000px;
     left: 49%;
+    z-index: 10;
   }
 
 

@@ -974,7 +974,9 @@ ul, ol {
     position: relative;
     z-index: 2;
   }
-
+.voice__arrow--sp {
+  display: none;
+}
   .voice__img--sp {
     display: none;
   }

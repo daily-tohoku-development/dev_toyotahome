@@ -444,6 +444,7 @@ ul, ol {
 
 .voice__inner {
   text-align: center;
+  position: relative;
 }
 
 .voice__img {
@@ -470,6 +471,14 @@ ul, ol {
 
 .voice__arrow--pc {
   display: none;
+}
+
+.voice__arrow--sp {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  mix-blend-mode: multiply;
 }
 
 /* ============================================
@@ -967,6 +976,10 @@ ul, ol {
   }
 
   .voice__img--sp {
+    display: none;
+  }
+
+  .about__arrow-down--sp {
     display: none;
   }
 

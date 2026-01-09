@@ -1,0 +1,50 @@
+dev_toyotahome
+│
+├─index.html
+│
+└─assets
+    ├─css
+    │   └─style.css
+    │
+    ├─js
+    │   └─main.js
+    │
+    └─img
+        ├─common
+        │     └─logo.png
+        │
+        ├─pc
+        │   ├─arrow_pc.png
+        │   ├─catalog_btn_pc.png
+        │   ├─catch.png
+        │   ├─description1_pc.png
+        │   ├─instagram_pc.png
+        │   ├─instagram_pc_1.png
+        │   ├─instagram_title_pc.png
+        │   ├─instagram_wave_pc.png
+        │   ├─modelhouse_map_pc.png
+        │   ├─modelhouse_title_pc.png
+        │   ├─mv_left_cover.png
+        │   ├─mv_left_pc.png
+        │   ├─mv_left_pc2.png
+        │   ├─mv_pc.png
+        │   ├─mv_wave_bottom.png
+        │   ├─mv_wave_top.png
+        │   ├─request_catalog_pc.png
+        │   ├─system_pc.png
+        │   ├─system_title_pc.png
+        │   └─visit_reservation_pc.png
+        │
+        └─sp
+            ├─arrow_down.png
+            ├─catalog_btn_sp.png
+            ├─description1_sp.png
+            ├─instagram_sp.png
+            ├─modelhouse_map_sp.png
+            ├─modelhouse_title_sp.png
+            ├─mv_sp.png
+            ├─mv_wave_sp.png
+            ├─request_catalog_sp.png
+            ├─system_sp.png
+            ├─system_title_sp.png
+            └─visit_reservation_sp.png

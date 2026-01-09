@@ -525,7 +525,7 @@ ul, ol {
   height: auto;
   display: block;
   margin-left: auto;
-  margin-right: -10px;
+  margin-right: 0;
 }
 
 .system__diagram-img--sp {

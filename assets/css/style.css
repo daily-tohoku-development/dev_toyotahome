@@ -871,11 +871,14 @@ ul, ol {
     flex-direction: column;
     gap: 0;
     z-index: 99;
-    transition: bottom 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
   }
 
-  .hero__cta-pc.is-scrolled {
-    bottom: 100px;
+  .hero__cta-pc.is-visible {
+    opacity: 1;
+    visibility: visible;
   }
 
   .hero__cta-link-pc {

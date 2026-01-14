@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const ctaPC = document.querySelector('.hero__cta-pc');
   const footerCta = document.querySelector('.footer__cta');
 
-  // PC版: スクロール時に位置調整
+  // PC版: スクロール時に表示/非表示切り替え
   if (ctaPC) {
     window.addEventListener('scroll', function() {
-      if (window.scrollY > 100) {
-        ctaPC.classList.add('is-scrolled');
+      if (window.scrollY > 300) {
+        ctaPC.classList.add('is-visible');
       } else {
-        ctaPC.classList.remove('is-scrolled');
+        ctaPC.classList.remove('is-visible');
       }
     });
   }

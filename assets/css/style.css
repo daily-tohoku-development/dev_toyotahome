@@ -844,7 +844,7 @@ ul, ol {
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 5;
   }
 
   .hero__catch-img {
